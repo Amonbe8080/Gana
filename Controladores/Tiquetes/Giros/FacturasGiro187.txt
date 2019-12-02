@@ -1,0 +1,27 @@
+____________________________________
+             G A N A                
+____________________________________
+           Datos Emisor             
+ DNI: 100978546               
+ Nombre: estefania pino gimenez         
+____________________________________
+           Datos Receptor           
+ DNI: 90875638             
+ Nombre: mario salazar       
+____________________________________
+           Datos de Envio           
+ Encargado Emisor: 1007222463 
+                                    
+           Enviado desde            
+ Colombia > Antioquia > Abejorral 
+                                    
+           A recibir en             
+ Canada > Quebec > Charlesbourg
+                                    
+           Fecha Envio              
+         2019-12-01 22:15:04           
+____________________________________
+Iva 3 %         Original 54000
+         Valor Total                
+           $ 52380            
+____________________________________

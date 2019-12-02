@@ -1,0 +1,27 @@
+____________________________________
+             G A N A                
+____________________________________
+           Datos Emisor             
+ DNI: 90875638               
+ Nombre: mario salazar         
+____________________________________
+           Datos Receptor           
+ DNI: 122978654             
+ Nombre: maria fernanda ospina zapata       
+____________________________________
+           Datos de Envio           
+ Encargado Emisor: 1007222463 
+                                    
+ Encargado Receptor: 1007222463   
+                                    
+           Enviado desde            
+ Colombia > Antioquia > Abejorral 
+                                    
+           A recibir en             
+ Colombia > Antioquia > Abejorral
+                                    
+           Fecha Envio              
+         2019-12-01 17:29:33           
+____________________________________
+            $ 725400           
+____________________________________

@@ -1,0 +1,27 @@
+____________________________________
+             G A N A                
+____________________________________
+           Datos Emisor             
+ DNI: 100034365               
+ Nombre: camila diaz hernandez         
+____________________________________
+           Datos Receptor           
+ DNI: 198765463             
+ Nombre: juan david lopez lopez       
+____________________________________
+           Datos de Envio           
+ Encargado Emisor: 400498536 
+                                    
+           Enviado desde            
+ Colombia > Antioquia > Abejorral 
+                                    
+           A recibir en             
+ Canada > Quebec > Charlesbourg
+                                    
+           Fecha Envio              
+         2019-12-01 22:00:00           
+____________________________________
+Iva 7 %         Original 1234567
+         Valor Total                
+           $ 1148147            
+____________________________________

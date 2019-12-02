@@ -1,0 +1,27 @@
+____________________________________
+             G A N A                
+____________________________________
+           Datos Emisor             
+ DNI: 43800561               
+ Nombre: Kelly Alzate Lopera         
+____________________________________
+           Datos Receptor           
+ DNI: 122978654             
+ Nombre: maria fernanda ospina zapata       
+____________________________________
+           Datos de Envio           
+ Encargado Emisor: 1007222463 
+                                    
+ Encargado Receptor: 400498536   
+                                    
+           Enviado desde            
+ Colombia > Antioquia > Abejorral 
+                                    
+           A recibir en             
+ Colombia > Antioquia > Abejorral
+                                    
+           Fecha Envio              
+         2019-12-01 17:53:39           
+____________________________________
+            $ 7477587           
+____________________________________
