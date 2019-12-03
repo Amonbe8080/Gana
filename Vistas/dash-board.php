@@ -49,15 +49,9 @@ if (@$_POST["accion"] == "Enviar Giro") {
     </head>
 
     <body class="lighten-3">
-
-        <!--Main Navigation-->
         <header>
-
-            <!-- Navbar -->
             <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
                 <div class="container-fluid">
-
-                    <!-- Links -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Izquierda -->
                         <img src="../Assets/Imagenes/avatar.png" alt=""/>
@@ -83,12 +77,10 @@ if (@$_POST["accion"] == "Enviar Giro") {
                     </div>
                 </div>
             </nav>
-            <!-- Navbar -->
 
-            <!-- Sidebar -->
             <div class="sidebar-fixed position-fixed">
                 <a href="dash-board.php" class="logo-wrapper waves-effect">
-                    <img src="../Assets/Imagenes/logo.png" class="img-fluid" alt="">
+                    <img src="../Assets/Imagenes/Gana-Index.png" class="img-fluid" width="230" alt="">
                 </a>
                 <h4 class="list-group-item  waves-effect border-0">
                     <?php list($correo) = explode("@", $_SESSION["correo"]);
@@ -108,18 +100,13 @@ if (@$_POST["accion"] == "Enviar Giro") {
                         <i class="fas fa-sign-out-alt"></i>Salir de taquilla</a>
                 </div>
             </div>
-            <!-- Sidebar -->
         </header>
-        <!--Main Navigation-->
-
-        <!--Main layout-->
 
         <div id="contenido" class="pt-4"></div>
 
         <main id="informacion" style="display:block" class="text-center pt-5 mx-lg-5" >
             <?php include 'informacionGeneral.php'; ?>
         </main>
-        <!--Main layout-->
 
         <!-- SCRIPTS -->
         <script type="text/javascript" src="ajax.js"></script>

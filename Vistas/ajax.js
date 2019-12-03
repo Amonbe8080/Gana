@@ -1,25 +1,35 @@
 function hacerGiro(idEncargado, idMunicipio) {
     var dniEmisor = document.getElementById("dniEmisor").value;
     var dniReceptor = document.getElementById("dniReceptor").value;
-    var idmuni = document.getElementById("idMunFinal").value;
-    var valor = document.getElementById("valor").value;
-
-    var ajax = new XMLHttpRequest();
-    ajax.open("GET", "../Controladores/Taquilla.php?idEncargado=" + idEncargado +
-            "&idMunicipio=" + idMunicipio + "&dniEmisor=" + dniEmisor +
-            "&dniReceptor=" + dniReceptor + "&idmuni=" + idmuni +
-            "&valor=" + valor+ "&accion=hacerGiro", true);
-    ajax.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            if (ajax.responseText != "<div class='alert alert-danger'>Ha ocurrido un error al generar la colilla</div>") {
-                window.open("../Controladores/Tiquetes/Giros/" + ajax.responseText, "_blank");
-                window.location = "dash-board.php";
-            } else {
-                document.getElementById("msjGiro").innerHTML = ajax.responseText;
+    try {
+        var idmuni = document.getElementById("idMunFinal").value;
+        var valor = document.getElementById("valor").value;
+    } catch (exception) {
+        toastr.error("Error al digitar los datos");
+        return;
+    }
+    
+    if (valor <= 0 || valor >= 9999999) {
+        toastr.error("Cantidad fuera de rango.");
+        return;
+    } else {
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "../Controladores/Taquilla.php?idEncargado=" + idEncargado +
+                "&idMunicipio=" + idMunicipio + "&dniEmisor=" + dniEmisor +
+                "&dniReceptor=" + dniReceptor + "&idmuni=" + idmuni +
+                "&valor=" + valor + "&accion=hacerGiro", true);
+        ajax.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                if (ajax.responseText != "<div class='alert alert-danger'>Ha ocurrido un error al generar la colilla</div>") {
+                    window.open("../Controladores/Tiquetes/Giros/" + ajax.responseText, "_blank");
+                    window.location = "dash-board.php";
+                } else {
+                    document.getElementById("msjGiro").innerHTML = ajax.responseText;
+                }
             }
         }
+        ajax.send();
     }
-    ajax.send();
 }
 
 function buscarEnvio(idMunicipio, idEncargado) {
@@ -146,18 +156,26 @@ function consultar() {
     var dniReceptor = document.getElementById("dniReceptor").value;
     var response = grecaptcha.getResponse();
 
-    if (response.length == 0) {
-        alert("Captcha no verificado")
+    if (dniReceptor.length < 6) {
+        toastr.error("Ingresa una identificación valida.");
     } else {
-        var ajax = new XMLHttpRequest();
-        ajax.open("GET", "../Controladores/Taquilla.php?dniReceptor=" + dniReceptor + "&accion=consultar", true);
-        ajax.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("alertQuery").innerHTML = ajax.responseText;
+        if (response.length == 0) {
+            toastr.error("Debes verificar el reCAPTCHA");
+        } else {
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", "Controladores/Taquilla.php?dniReceptor=" + dniReceptor + "&accion=consultar", true);
+            ajax.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (ajax.responseText != "No existe") {
+                        $("#modal").modal();
+                        document.getElementById("alertQuery").innerHTML = ajax.responseText;
+                    } else {
+                        toastr.error("No existe un envio para este usuario.");
+                    }
+                }
             }
+            ajax.send();
         }
-        ajax.send();
     }
-
 }
 

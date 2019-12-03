@@ -1,0 +1,27 @@
+____________________________________
+             G A N A                
+____________________________________
+           Datos Emisor             
+ DNI: 888888               
+ Nombre: Pues yo quien mas         
+____________________________________
+           Datos Receptor           
+ DNI: 9999999             
+ Nombre: Maelo Niche Ruiz       
+____________________________________
+           Datos de Envio           
+ Encargado Emisor: 400498536 
+                                    
+           Enviado desde            
+ Colombia > Antioquia > Abejorral 
+                                    
+           A recibir en             
+ Canada > Quebec > Charlesbourg
+                                    
+           Fecha Envio              
+         2019-12-02 23:07:52           
+____________________________________
+Iva 7 %         Original 450000
+         Valor Total                
+           $ 418500            
+____________________________________

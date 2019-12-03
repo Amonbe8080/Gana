@@ -5,7 +5,7 @@
             <url>Controladores/Taquilla.php</url>
             <bookmark id="1">
                 <name/>
-                <line>110</line>
+                <line>44</line>
                 <key/>
             </bookmark>
         </file>
@@ -13,11 +13,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group/>
         <group name="Php">
+            <file>file:/C:/wamp/www/Gana/Vistas/envio.php</file>
+            <file>file:/C:/wamp/www/Gana/Controladores/ComprobanteEntrega.php</file>
             <file>file:/C:/wamp/www/Gana/Vistas/ajax.js</file>
             <file>file:/C:/wamp/www/Gana/Controladores/Taquilla.php</file>
-            <file>file:/C:/wamp/www/Gana/Vistas/regUsuario.php</file>
             <file>file:/C:/wamp/www/Gana/Vistas/dash-board.php</file>
-            <file>file:/C:/wamp/www/Gana/Vistas/informacionGeneral.php</file>
+            <file>file:/C:/wamp/www/Gana/Controladores/ComprobanteGiro.php</file>
+            <file>file:/C:/wamp/www/Gana/Vistas/busqueda.php</file>
         </group>
     </open-files>
 </project-private>

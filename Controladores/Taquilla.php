@@ -77,12 +77,12 @@ class Taquilla {
         $fechaEnvio = date("Y-m-d H:i:s");
 
         $sql = "INSERT INTO `envios`(`idEnvio`,`idMunInicial`, `dniEmisor`, `dniReceptor`, `Valor`, `idMunFinal`, `fechaEnvio`, `estado`, `id_encargado`) VALUES"
-                . "(0,$idMuni,$dniEmisor,$dniReceptor,$valorTotal,8,'$fechaEnvio','Pendiente',$idEncargado)";
+                . "(0,$idMuni,$dniEmisor,$dniReceptor,$valorTotal,$idMunFinal,'$fechaEnvio','Pendiente',$idEncargado)";
         $res = $con->conectar()->query($sql);
         if ($res) {
             header("location: ComprobanteGiro.php?fechaEnvio=$fechaEnvio&dniEmisor=$dniEmisor&dniReceptor=$dniReceptor&valor=$valor&descuento=$descuento");
             exit();
-        }else{
+        } else {
             echo $sql;
         }
     }
@@ -456,10 +456,12 @@ class Taquilla {
         $con = new Conexion();
 
         $dniReceptor = htmlspecialchars($_GET['dniReceptor']);
-        $sql = "SELECT * FROM buscarenvio WHERE dniReceptor = $dniReceptor";
+        $sql = "SELECT * FROM buscarenvio WHERE dniReceptor = $dniReceptor and estado = 'Pendiente'";
         $res = $con->conectar()->query($sql);
-        while ($row = $res->fetch_object()) {
-            echo "<div class='accordion' id='accordionExample$row->idEnvio'>
+        $dniReceptor = 0;
+        if (mysqli_num_rows($res) > 0) {
+            while ($row = $res->fetch_object()) {
+                echo "<div class='accordion' id='accordionExample$row->idEnvio'>
                 <div class='card' id='$row->idEnvio'>
                     <div class='card-header' id='h$row->idEnvio'>
                         <h2 class='mb-0'>
@@ -581,6 +583,10 @@ class Taquilla {
                         </div>
                     </div>
                 </div>";
+            }
+        }else{
+            echo "No existe";
         }
     }
+
 }
