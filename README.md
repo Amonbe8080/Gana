@@ -9,6 +9,28 @@ Pagina con el fin de evaluar temas de php como
   - Uso de Toastr para generar alertas
   - Uso de procedimientos almacenados y vistas
   - Consumo de API (Recaptcha)
+    
+ # Funcionalidad de Consultar Envio
+ Tiene funcionalidad y el Recaptcha v2 esta vinculado con mi cuenta de Google, se usa 2 Api Key (Lado Server, Lado Cliente).
+ [Para mas información](https://developers.google.com/recaptcha/intro).
+ ![Imagen del consultar](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/ConsultarEnvio.png)
+ 
+ En caso **de existir un envio**, se mostrara la siguiente ventana modal.
+ ![Imagen del consultar 1](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/Consultar-1.png)
+ 
+ En caso de **no existir un envio**, se mostrara la siguiente alerta.
+ ![Imagen del consultar](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/Consultar-2.png)
+ 
+ En caso de que el reCAPTCHA **expire o falle** al momento de chequearlo, se mostrara la siguiente alerta.
+ ![Imagen del consultar](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/Consultar-3.png)
+ 
+# Notas Rapidas
+ - El proyecto usa como Framework de Diseño [Material Design for Bootstrap](https://mdbootstrap.com/).
+ - Cuenta con arquitectura en 2 capas **Vista / Controlador**.
+ - Al **guardar los tiquetes** tiene el siguiente orden
+    - Tiquetes :file_folder:
+      - Entregas :file_folder:
+      - Giros :file_folder:
   
   Login con sus respectivas validaciones
   ![Imagen del login](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/Login.png)
@@ -58,20 +80,7 @@ Pagina con el fin de evaluar temas de php como
   ![Imagen del añadirUsuario](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/AddUsuario.png)
   En caso de existir el sistema mostrara el siguiente error
   ![Imagen del añadirUsuario](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/AddUsuario-Error.png)
-  
- # Funcionalidad En Construcción (Diseño)
- Tiene funcionalidad y el Recaptcha v2 esta vinculado con mi cuenta de Google, se usa 2 Api Key (Lado Server, Lado Cliente).
- [Para mas información](https://developers.google.com/recaptcha/intro).
- ![Imagen del consultar](https://github.com/Amonbe8080/Gana/blob/master/Screenshots/ConsultarEnvio.png)
- 
-# Notas Rapidas
- - El proyecto usa como Framework de Diseño [Material Design for Bootstrap](https://mdbootstrap.com/).
- - Cuenta con arquitectura en 2 capas **Vista / Controlador**.
- - Al **guardar los tiquetes** tiene el siguiente orden
-    - Tiquetes :file_folder:
-      - Entregas :file_folder:
-      - Giros :file_folder:
- 
+
 
 
   
